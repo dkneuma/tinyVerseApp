@@ -6,7 +6,16 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var tinyverses = require('./routes/tinyverses');
+
+var mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/tinyVerseApp', function(err) {
+    if(err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
 
 var app = express();
 
@@ -23,7 +32,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/tinyverses', tinyverses);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
