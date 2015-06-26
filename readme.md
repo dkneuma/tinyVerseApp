@@ -1,7 +1,7 @@
-<h1>TinyVerse API</h1>
+#TinyVerse API
 
-<h2>TinyVerse service</h2>
-<p>API to database of short bible verses along with a devotional commentary.
+##TinyVerse service
+API to database of short bible verses along with a devotional commentary.
 Database of short bible verses, twitter style</p>
 <p>Data fields:</p>
 Id, shortverse, bibleref, commentary.
@@ -9,11 +9,19 @@ Id, shortverse, bibleref, commentary.
 <p>MEAN Stack application</p>
 <p>Initially this will be a rough crud API only. Later we will add better back-end tools using AngularJS and Bootstrap Styling</p>
 
-<h3>Version 1</h3>
+###Version 1
 <p>No separation. All Mongo, Express and Node in one file = server.js<p>
 <p>Later we will put the routes and setup in their own file</p>
 
-<h2>Background</h2>
+##Added random find with this cheat
+This method is very basic, you query every documents in the collection and skip a random number of indexed documents. Thus, method 4a:
+
+db.col.find().limit(-1).skip(Math.random() * db.col.count());
+
+Method 4b is a small improvement of 4a, instead of executing db.col.count() each time, you simply save the document count in a variable.
+
+
+##Background
 
 <p>In searching for an application idea for my class on wearables this fall, 
 I thought of the idea of an app that would periodically pop up a short, 
