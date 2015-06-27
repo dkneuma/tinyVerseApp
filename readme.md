@@ -36,9 +36,8 @@ Here are some of my example ideas
 ###TinyVerse:	
 
         Reference | Verse | Comment
-        ---|---|---
-        
-        John 11:35 | Jesus Wept| Commentary here
+        --- | --- | ---
+        John 11:35 | Jesus Wept | Commentary here
         John 11:25 | I am the resurrection and the life | Commentary Here
         Psalm 46:10 | Be Still | Commentary here
  
