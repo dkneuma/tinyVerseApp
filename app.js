@@ -10,7 +10,11 @@ var tinyrandom = require('./routes/tinyrandom');
 var tinyverses = require('./routes/tinyverses');
 
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/tinyVerseApp', function(err) {
+
+// Connection for MongoLab
+var mongoConnectionString = "mongodb://tinyuser:tinylittlepassword@ds043981.mongolab.com:43981/tinyverse"
+//var mongoConnectionString = "mongodb://localhost/tinyVerseApp"
+mongoose.connect(mongoConnectionString, function(err) {
     if(err) {
         console.log('connection error', err);
     } else {
