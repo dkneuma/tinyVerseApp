@@ -22,6 +22,8 @@
             <th><a href="" ng-click="predicate = 'reference'; reverse=false">Reference</a></th>
             <th><a href="" ng-click="predicate = 'verse'; reverse=false">Verse</a></th>
             <th>Commentary</th>
+            <th>Access count</th>
+            <th>Read count</th>
             <th>Action</th>
             <th>&nbsp;</th>
         </tr>
@@ -31,6 +33,8 @@
             <td><input class="form-control" ng-model="tiny.reference"></td>
             <td><input class="form-control" ng-model="tiny.verse"></td>
             <td><textarea class="form-control" ng-model="tiny.comment" >Please enter your commentary</textarea></td>
+            <td><input class="form-control" ng-model="tiny.accesscount"></td>
+            <td><input class="form-control" ng-model="tiny.readcount"></td>
             <td><button class="btn btn-primary" ng-click="addTiny()">Add TinyVerse</button></td>
             <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;
                 <button class="btn btn-info" ng-click="deselect()">Clear</button></td>
@@ -40,6 +44,8 @@
             <td>{{tiny.reference}}</td>
             <td>{{tiny.verse}}</td>
             <td>{{tiny.comment}}</td>
+            <td>{{tiny.readcount}}</td>
+            <td>{{tiny.accesscount}}</td>
             <td><button class="btn btn-danger" ng-click="remove(tiny._id)">Remove</button></td>
             <td><button class="btn btn-warning" ng-click="edit(tiny._id)">Edit</button></td>
         </tr>

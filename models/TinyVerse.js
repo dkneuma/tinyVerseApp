@@ -7,6 +7,8 @@ var TinyverseSchema = new mongoose.Schema({
     verse: String,
     reference: String,
     comment: String,
+    accesscount: Number,
+    readcount: Number,
     updated_at: {type: Date, default: Date.now() }
 });
 

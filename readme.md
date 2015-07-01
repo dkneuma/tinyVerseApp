@@ -47,6 +47,7 @@ All data in JSON format
         
         | Action | URL | CRUD |
         | --- | --- | --- |
+        
         | GET | /tinyverses | Retrieve all records |
         | GET | /tinyverses/:id | Retrieve specific record |
         | POST | /tinyverses | Create new record |
